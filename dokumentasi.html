@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentasi Template Portofolio</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #111;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+        h1 { font-size: 2.5em; }
+        h2 { font-size: 2em; margin-top: 40px; }
+        h3 { font-size: 1.5em; margin-top: 30px; border-bottom: 1px solid #eee; }
+        code {
+            background-color: #eef;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.95em;
+        }
+        pre {
+            background-color: #2d2d2d;
+            color: #f1f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            color: inherit;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .highlight {
+            background-color: #fffbdd;
+            padding: 15px;
+            border-left: 4px solid #ffca28;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dokumentasi Template Portofolio Mirza Tontowi</h1>
+        <p>Selamat datang di dokumentasi untuk template portofolio personal Anda. Dokumen ini akan memandu Anda memahami struktur proyek, cara kerja kode, dan bagaimana cara melakukan kustomisasi sesuai dengan kebutuhan Anda.</p>
+
+        <!-- =================================================================== -->
+        <h2>1. Memulai Proyek</h2>
+        <!-- =================================================================== -->
+        <p>Sebelum memulai, pastikan Anda memiliki struktur file dan folder yang benar. Struktur ini penting agar semua aset seperti gambar, CSS, dan JavaScript dapat terhubung dengan benar.</p>
+        
+        <h3>Struktur Folder</h3>
+        <pre><code>/portfolio-project
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── images/
+│   ├── portrait.png
+│   ├── project1.png
+│   ├── project2.png
+│   └── project3.png
+├── index.html
+├── about.html
+└── projects.html</code></pre>
+
+        <h3>Daftar File dan Fungsinya</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>File / Folder</th>
+                    <th>Deskripsi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>index.html</code></td>
+                    <td>Halaman utama (Home) yang menampilkan foto profil dan nama dengan efek ketik.</td>
+                </tr>
+                <tr>
+                    <td><code>about.html</code></td>
+                    <td>Halaman "About Me" yang berisi deskripsi singkat tentang diri Anda.</td>
+                </tr>
+                <tr>
+                    <td><code>projects.html</code></td>
+                    <td>Halaman "Projects" yang menampilkan portofolio proyek dalam bentuk <em>bento grid</em>.</td>
+                </tr>
+                <tr>
+                    <td><code>css/style.css</code></td>
+                    <td>Satu file CSS yang mengatur tampilan dan gaya untuk semua halaman (layout, warna, font, animasi).</td>
+                </tr>
+                <tr>
+                    <td><code>js/script.js</code></td>
+                    <td>File JavaScript yang mengontrol logika interaktif, khususnya efek ketik di halaman utama.</td>
+                </tr>
+                <tr>
+                    <td><code>images/</code></td>
+                    <td>Folder untuk menyimpan semua aset gambar yang digunakan di website.</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!-- =================================================================== -->
+        <h2>2. Struktur Halaman HTML</h2>
+        <!-- =================================================================== -->
+        <p>Semua file HTML (<code>index.html</code>, <code>about.html</code>, <code>projects.html</code>) memiliki struktur dasar yang sama untuk menjaga konsistensi. Mari kita bedah struktur file <code>index.html</code> sebagai contoh.</p>
+
+        <h3>Struktur Umum</h3>
+        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;!-- Metadata, Judul Halaman, dan Link ke CSS & Font Awesome --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="page-wrapper"&gt;
+        &lt;header&gt;
+            &lt;!-- Navigasi --&gt;
+        &lt;/header&gt;
+
+        &lt;main class="container"&gt;
+            &lt;!-- Konten utama yang berbeda di setiap halaman --&gt;
+        &lt;/main&gt;
+
+        &lt;footer&gt;
+            &lt;!-- Ikon Sosial Media --&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+    &lt;script src="js/script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        <ul>
+            <li><strong><code>&lt;head&gt;</code></strong>: Berisi metadata, judul halaman, dan tautan ke file <code>style.css</code> serta library Font Awesome untuk ikon.</li>
+            <li><strong><code>.page-wrapper</code></strong>: Pembungkus utama halaman. Div ini digunakan untuk menerapkan animasi transisi saat halaman dimuat.</li>
+            <li><strong><code>&lt;header&gt;</code></strong>: Bagian atas halaman yang berisi navigasi. Posisinya <em>fixed</em> sehingga selalu terlihat.</li>
+            <li><strong><code>&lt;main class="container"&gt;</code></strong>: Konten utama halaman. Isinya akan berbeda untuk halaman Home, About, dan Projects.</li>
+            <li><strong><code>&lt;footer&gt;</code></strong>: Bagian bawah halaman yang berisi ikon sosial media. Posisinya juga <em>fixed</em>.</li>
+            <li><strong><code>&lt;script&gt;</code></strong>: Memanggil file JavaScript. Hanya diperlukan di <code>index.html</code> untuk efek ketik.</li>
+        </ul>
+        <div class="highlight">
+            <strong>Penting:</strong> Navigasi di setiap halaman memiliki link yang ditandai dengan kelas <code>.active</code>. Kelas ini digunakan oleh CSS untuk memberikan garis bawah pada link halaman yang sedang aktif. Pastikan Anda memindahkannya sesuai halaman yang sedang diedit.
+        </div>
+
+        <!-- =================================================================== -->
+        <h2>3. Penjelasan Kode CSS (style.css)</h2>
+        <!-- =================================================================== -->
+        <p>File <code>style.css</code> adalah pusat kendali visual dari portofolio ini. Kode di dalamnya dibagi menjadi beberapa bagian untuk kemudahan pemeliharaan.</p>
+
+        <h3>Global Styles & Variables</h3>
+        <p>Bagian paling atas CSS mendefinisikan variabel global. Ini adalah cara termudah untuk mengubah tema situs Anda secara konsisten.</p>
+        <pre><code class="language-css">:root {
+    --background-color: #FFFFFF;
+    --text-color: #111111;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+</code></pre>
+        <p>Anda bisa mengubah nilai variabel ini untuk mengganti warna latar, warna teks, dan jenis font di seluruh situs tanpa harus mengubah setiap elemen satu per satu.</p>
+        
+        <h3>Animasi Transisi Halaman</h3>
+        <p>Setiap kali halaman dimuat, akan ada animasi <em>fade in</em> yang halus. Ini dicapai dengan CSS Keyframes.</p>
+        <pre><code class="language-css">@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-wrapper {
+    animation: fadeIn 0.6s ease-in-out;
+}
+</code></pre>
+        <p>Animasi <code>fadeIn</code> diterapkan pada <code>.page-wrapper</code>, membuat semua konten muncul secara perlahan dari bawah.</p>
+        
+        <h3>Layout Utama (Flexbox)</h3>
+        <p>Layout utama diatur menggunakan Flexbox pada elemen <code>&lt;main class="container"&gt;</code>. Ini memungkinkan konten (misalnya, gambar dan teks di halaman utama) untuk disejajarkan secara horizontal dengan rapi.</p>
+        <pre><code class="language-css">main.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+</code></pre>
+        <p>Pada layar kecil (responsif), properti <code>flex-direction</code> diubah menjadi <code>column</code> agar konten tersusun secara vertikal.</p>
+
+        <h3>Projects Page (Grid Layout)</h3>
+        <p>Halaman proyek menggunakan CSS Grid untuk membuat layout "bento-box".</p>
+        <pre><code class="language-css">.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dua kolom sama besar */
+    gap: 20px;
+}
+
+.project-box.p1 {
+    grid-column: 1 / -1; /* Proyek pertama membentang selebar 2 kolom */
+}
+</code></pre>
+        <p>Struktur ini fleksibel dan mudah diubah jika Anda ingin menambah atau mengubah tata letak proyek.</p>
+
+        <h3>Efek Hover pada Proyek</h3>
+        <p>Saat kursor diarahkan ke kotak proyek, sebuah lapisan gelap (overlay) dengan judul proyek akan muncul.</p>
+        <pre><code class="language-css">.project-box .overlay {
+    /* Posisi absolut untuk menutupi gambar */
+    position: absolute; 
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0; /* Awalnya transparan */
+    transition: opacity 0.4s ease;
+}
+
+.project-box:hover .overlay {
+    opacity: 1; /* Muncul saat di-hover */
+}
+</code></pre>
+        
+        <!-- =================================================================== -->
+        <h2>4. Logika JavaScript (script.js)</h2>
+        <!-- =================================================================== -->
+        <p>JavaScript digunakan untuk membuat efek ketik (typing effect) pada peran (role) di bawah nama Anda di halaman utama.</p>
+        
+        <h3>Cara Kerja Efek Ketik</h3>
+        <ol>
+            <li><strong>Menunggu DOM Siap</strong>: Skrip berjalan setelah seluruh halaman HTML dimuat, menggunakan <code>DOMContentLoaded</code>.</li>
+            <li><strong>Inisialisasi Variabel</strong>:
+                <ul>
+                    <li><code>roles</code>: Sebuah array yang berisi teks yang akan diketik (misal: "WEB DESIGNER").</li>
+                    <li><code>roleIndex</code>, <code>charIndex</code>: Penunjuk untuk teks dan karakter saat ini.</li>
+                    <li><code>isDeleting</code>: Sebuah flag (penanda) untuk mengetahui apakah skrip sedang dalam mode mengetik atau menghapus.</li>
+                </ul>
+            </li>
+            <li><strong>Fungsi <code>type()</code></strong>: Ini adalah fungsi utama yang berjalan berulang kali.
+                <ul>
+                    <li><strong>Jika <code>isDeleting</code> true</strong>: Skrip akan menghapus karakter satu per satu dari teks yang ditampilkan. Jika semua sudah terhapus, <code>isDeleting</code> diubah menjadi false dan skrip pindah ke role berikutnya.</li>
+                    <li><strong>Jika <code>isDeleting</code> false</strong>: Skrip akan menambahkan karakter satu per satu. Jika seluruh kata sudah tertulis, <code>isDeleting</code> diubah menjadi true dan ada jeda sejenak sebelum mulai menghapus.</li>
+                </ul>
+            </li>
+            <li><strong>Rekursi dengan <code>setTimeout</code></strong>: Fungsi <code>type()</code> memanggil dirinya sendiri setelah jeda waktu tertentu (<code>typingSpeed</code> atau <code>deletingSpeed</code>), menciptakan ilusi animasi mengetik.</li>
+        </ol>
+
+        <pre><code class="language-javascript">// Daftar peran yang ingin ditampilkan
+const roles = ["WEB DESIGNER", "WEB DEVELOPER", "UI/UX DESIGNER"];
+
+// ... variabel lainnya ...
+
+function type() {
+    const currentRole = roles[roleIndex];
+    
+    if (isDeleting) {
+        // Logika menghapus
+    } else {
+        // Logika mengetik
+    }
+    
+    // Panggil fungsi ini lagi setelah jeda waktu
+    setTimeout(type, speed); 
+}
+</code></pre>
+
+        <!-- =================================================================== -->
+        <h2>5. Panduan Kustomisasi</h2>
+        <!-- =================================================================== -->
+        <p>Bagian ini memberikan langkah-langkah praktis untuk mengubah konten dan tampilan portofolio.</p>
+
+        <h3>A. Mengubah Informasi Personal</h3>
+        <ul>
+            <li><strong>Nama</strong>: Buka <code>index.html</code> dan ubah teks di dalam elemen <code>&lt;h1&gt;</code>.</li>
+            <li><strong>Deskripsi Diri</strong>: Buka <code>about.html</code> dan ubah teks di dalam paragraf <code>&lt;p&gt;</code>.</li>
+            <li><strong>Foto Profil</strong>: Ganti file <code>images/portrait.png</code> dengan foto Anda. Usahakan nama file tetap sama atau perbarui path di <code>index.html</code>.</li>
+        </ul>
+
+        <h3>B. Mengubah Peran (Typing Effect)</h3>
+        <p>Buka file <code>js/script.js</code>. Cari baris ini dan ubah isinya:</p>
+        <pre><code class="language-javascript">const roles = ["WEB DESIGNER", "WEB DEVELOPER", "UI/UX DESIGNER"];
+</code></pre>
+        <p>Anda bisa menambah, menghapus, atau mengubah teks di dalam array tersebut. Anda juga bisa mengatur kecepatan ketik dan hapus dengan mengubah nilai variabel <code>typingSpeed</code> dan <code>deletingSpeed</code>.</p>
+
+        <h3>C. Mengupdate Proyek</h3>
+        <p>Buka file <code>projects.html</code> dan temukan bagian <code>.projects-grid</code>.</p>
+        <pre><code class="language-html">&lt;!-- Project 1 --&gt;
+&lt;a href="#" class="project-box p1" target="_blank"&gt;
+    &lt;img src="images/project1.png" alt="Project 1 Screenshot"&gt;
+    &lt;div class="overlay"&gt;
+        &lt;h3&gt;Framework Finder&lt;/h3&gt;
+    &lt;/div&gt;
+&lt;/a&gt;
+</code></pre>
+        <ul>
+            <li><strong>Link Proyek</strong>: Ubah nilai <code>href="#"</code> menjadi URL proyek Anda.</li>
+            <li><strong>Gambar Proyek</strong>: Ganti file <code>images/project1.png</code> dengan screenshot proyek Anda, atau ubah path di <code>src="..."</code>.</li>
+            <li><strong>Nama Proyek</strong>: Ubah teks di dalam <code>&lt;h3&gt;</code>.</li>
+        </ul>
+        <p>Ulangi untuk proyek lainnya.</p>
+
+        <h3>D. Mengubah Link Sosial Media</h3>
+        <p>Di setiap file HTML, temukan bagian <code>&lt;footer&gt;</code>. Ubah nilai <code>href="#"</code> pada setiap tag <code>&lt;a&gt;</code> dengan link profil sosial media Anda.</p>
+        <pre><code class="language-html">&lt;div class="social-icons"&gt;
+    &lt;a href="https://twitter.com/username" aria-label="X"&gt;&lt;i class="fa-brands fa-x-twitter"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href="https://github.com/username" aria-label="GitHub"&gt;&lt;i class="fa-brands fa-github"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;!-- dan seterusnya --&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <h3>E. Mengubah Tema (Warna & Font)</h3>
+        <p>Buka <code>css/style.css</code> dan ubah nilai variabel di bagian paling atas (<code>:root</code>).</p>
+        <pre><code class="language-css">/* Ganti dengan kode warna atau nama font yang Anda inginkan */
+:root {
+    --background-color: #F0F2F5; /* Contoh: Latar belakang abu-abu muda */
+    --text-color: #2c3e50;       /* Contoh: Teks biru tua */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Lato', sans-serif;
+}
+</code></pre>
+        <p>Jangan lupa untuk mengimpor font baru dari Google Fonts di baris paling atas file CSS jika diperlukan.</p>
+
+        <hr>
+        <p>Semoga dokumentasi ini bermanfaat! Dengan memahami struktur dan logika di baliknya, Anda dapat dengan mudah mengembangkan portofolio ini lebih jauh sesuai kreativitas Anda.</p>
+    </div>
+</body>
+</html>
